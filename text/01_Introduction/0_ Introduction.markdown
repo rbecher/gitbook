@@ -40,9 +40,8 @@ aprender como funcionam os protocolos e funções internas no Git.
 Até aqui, se você achou algum erro ou quer contribuir com o livro, você
 pode enviar um email para [schacon@gmail.com](mailto://schacon@gmail.com), ou
 pode clonar o código-fonte deste livro em 
-[http://github.com/schacon/gitscm](http://github.com/schacon/gitscm) e me 
+[http://github.com/schacon/gitbook](http://github.com/schacon/gitbook) e me 
 enviar um patch ou pull-request.
-
 
 ### Referências ###
 Muitos dos conteúdos desse livro é extraído de diferentes fontes e então 
