@@ -11,7 +11,7 @@ dos ancestrais comuns do test, você pode usar três pontos ao invés de dois.
     $ git diff master...test
 
 linkgit:git-diff[1] é uma ferramenta incrivelmente útil para entender as 
-alterações que exitem entre dois pontos quaisquer no histórico de seu projeto,
+alterações que existem entre dois pontos quaisquer no histórico de seu projeto,
 ou para ver o que as pessoas estão tentando introduzir em novos branches, etc.
 
 ### O que você irá commitar ###

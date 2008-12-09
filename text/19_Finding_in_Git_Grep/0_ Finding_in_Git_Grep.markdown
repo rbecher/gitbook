@@ -5,7 +5,7 @@ linkgit:git-grep[1]. Isso é possível ser feito com o comando 'grep' no unix,
 mas com 'git grep' você também pode procurar através de versões anteriores do
 projeto sem ter que realizar algum checkout.
 
-Por exemplo, se eu queria ver cada lugar que usou a chamada 'xmmap' no meu 
+Por exemplo, se eu quisesse ver cada lugar que usou a chamada 'xmmap' no meu 
 repositório git.git, eu poderia executar isso:
 
 	$ git grep xmmap
@@ -21,7 +21,7 @@ repositório git.git, eu poderia executar isso:
 	sha1_file.c:            buf = xmmap(NULL, size, PROT_READ, MAP_PRIVATE, fd, 0);
 	wrapper.c:void *xmmap(void *start, size_t length,
 
-Se eu queria ver o número de linhas de cada arquivo encontrado, eu posso 
+Se eu quisesse ver o número de linhas de cada arquivo encontrado, eu posso 
 adicionar a opção '-n':    
 
 	$>git grep -n xmmap

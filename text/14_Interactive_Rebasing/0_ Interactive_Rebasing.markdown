@@ -97,7 +97,7 @@ Se 'edit' é especificado, fará a mesma coisa, mas irá parar antes
 de mover para o próximo commit e o levará para a linha de comando para você 
 poder corrigir o commit, ou modificar o conteúdo do commit de alguma forma.
 
-Se você queria dividir um commit, por exemplo, você especificaria 'edit' para
+Se você quisesse dividir um commit, por exemplo, você especificaria 'edit' para
 esse commit:
 
 	pick   fc62e55 added file_size
@@ -108,7 +108,7 @@ esse commit:
 
 E então quando você for levado para a linha de comando, você reverterá aquele 
 commit em dois (ou mais) novos. Digamos que o 21d80a5 modificou dois arquivos, 
-arquivo1 e arquivo2, e você queria dividir eles em commits separados. Você 
+arquivo1 e arquivo2, e você quisesse dividir eles em commits separados. Você 
 poderia fazer isso depois que o rebase deixá-lo na linha de comando:
 
 	$ git reset HEAD^

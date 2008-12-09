@@ -32,7 +32,7 @@ irá restaurar hello.rb da versão no HEAD, para que ambos
 
 ### Corrigindo erros commitados ###
 
-Se você realizou um commit que não queria, existem dois caminhos 
+Se você realizou um commit e depois se arrependeu, existem dois caminhos 
 fundamentalmente diferentes para resolver o problema:
 
 1. Você pode criar um novo commit que desfaz qualquer coisa que foi
