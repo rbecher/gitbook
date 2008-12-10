@@ -18,8 +18,8 @@ comando, mas para muitas operações básicas, ele é muito bom.
 
 ### Terceira Parte Projects ###
 
-Para usuários Mac exite
-[GitNub](http://github.com/Caged/gitnub/wikis)
+Para usuários Mac existem
+[GitX](http://gitx.frim.nl/) and [GitNub](http://github.com/Caged/gitnub/wikis)
 
 Para usuários Linux ou Qt existe
 [QGit](http://digilander.libero.it/mcostalba/)
