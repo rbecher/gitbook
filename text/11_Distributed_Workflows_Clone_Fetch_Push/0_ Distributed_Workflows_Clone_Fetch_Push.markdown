@@ -98,19 +98,19 @@ clones e pulls usando o protocolo ssh:
 Alternativamente, git possui um protocolo nativo, ou pode usar rsync or http;
 veja linkgit:git-pull[1] para mais detalhes.   
 
+
 Git também pode ser usado no modo CVS, com um repositório central para onde 
 vários usuários enviam alterações; veja linkgit:git-push[1] e 
-link:cvs-migration.html[git para usuários CVS].
+linkgit:gitcvs-migration[1].
 
 
 ### Repositórios Git Públicos ###
 
+<<<<<<< HEAD:text/11_Distributed_Workflows_Clone_Fetch_Push/0_ Distributed_Workflows_Clone_Fetch_Push.markdown
 Uma outra forma de enviar alterações para um projeto é informar ao responsável 
 por aquele projeto para realizar um pull das alterações de seu repositório 
-usando linkgit:git-pull[1]. Na seção "<<getting-updates-with-git-pull,
-Recuperando alterações com git-pull>>" nós descrevemos uma forma de
-recuperar do repositório "principal", mas ele também funciona em outras 
-direções.
+usando linkgit:git-pull[1]. Essa é uma forma de conseguir atualizações do 
+repositório "principal", mas ele também funciona em outras direções.
 
 Se o responsável pelo projeto e você possuem contas na mesma máquina, então
 você pode somente realizar um pull das alterações diretamente do outro 
@@ -152,11 +152,10 @@ um outro desenvolvedor com repositório público, parece com isso:
 
 ### Enviando alterações para um repositório público ###
 
-Veja que as duas técnicas desenhadas acima ( exportando através
-<<exporting-via-http,http>> ou <<exporting-via-git,git>>) permite outros
-responsáveis por projetos receberem as últimas alterações sua, mas eles não
-tem permissão de escrita, no qual você precisará atualizar o repositório 
-público com as últimas alterações criadas no seu repositório pessoal.
+Veja que exportando via http ou git, permite outros mantenedores recuperem suas
+últimas alterações, mas eles não tem permissão de acesso para escrita. Por isso, 
+você precisará atualizar o repositório público com as últimas alterações criadas
+em seu repositório privado.
 
 Uma forma simples de fazer isso é usando linkgit:git-push[1] e ssh; para
 atualizar o branch remoto chamado "master" com o último estado de seu branch
@@ -168,14 +167,14 @@ ou só
 
     $ git push ssh://seuservidor.com/~voce/proj.git master
 
-Como o git-fetch, git-push irá reclamar se isso não resultar em um    
-<<fast-forwards,fast forward>>; veja a seção sequinte sobre como proceder
-nesse caso.
 
-Veja que o alvo do "push" é normalmente um repositório  <<def_bare_repository,bare>>. 
-Você também pode enviar para um repositório que tem a árvore de trabalho 
-atualizada, mas essa árvore não será atualizada pelo push. Isso pode levar a
-resultados inesperados se o branch que você enviou é o branch atual.
+Como o git-fetch, git-push irá reclamar se isso não resultar em um    
+fast forward; veja a seção seguinte sobre como proceder nesse caso.
+
+Veja que o alvo de um "push" é normalmente um repositório mínimo. 
+Você também pode enviar para um repositório que já possui uma árvore de
+trabalho, mas essa árvore não será atualizada pelo push. Isso pode levar
+a resultados inesperados se o branch que você enviou é o branch atual!
 
 Como com o git-fetch, você também pode ajustar as opções de configuração, 
 então por exemplo, depois
@@ -195,8 +194,8 @@ e remote.<name>.push em linkgit:git-config[1] para mais detalhes.
 
 ### O que fazer quando um push falha ###
 
-Se um push não resultar em um <<fast-forwards,fast forward>> do branch remoto
-então falhará com um erro desse tipo:
+Se um push não resultar em um fast forward do branch remoto, então falhará 
+com um erro desse tipo:
 
     error: remote 'refs/heads/master' is not an ancestor of
     local  'refs/heads/master'.
@@ -206,10 +205,8 @@ então falhará com um erro desse tipo:
 Isso pode acontecer, por exemplo, se você    
 
 	- usar 'git-reset --hard' para remover commit já publicados, ou
-	- usar 'git-commit --amend' para substituir commits já publicados
-	  (como em <<fixing-a-mistake-by-rewriting-history>>), or
-	- usar 'git-rebase' para recriar qualquer commit já publicado (como
-	  em <<using-git-rebase>>).
+	- usar 'git-commit --amend' para substituir commits já publicados ou
+	- usar 'git-rebase' para recriar qualquer commit já publicado.
 
 Você pode forçar git-push para realizar a atualização precedendo o nome do
 branch com um sinal de +:      
@@ -218,8 +215,7 @@ branch com um sinal de +:
 
 Normalmente quando um branch head é modificado em um repositório público, ele
 é modificado para apontar para um descendente desse commit que ele apontou antes.
-Forçar um push nessa situação, você quebra aquela convênção.
-(Veja <<problems-with-rewriting-history>>.)
+Forçando um push nessa situação, você quebra aquela convênção.
 
 Contudo, essa é uma prática comum para pessoas que precisam de uma forma 
 simples para publicar uma série de patch de um trabalho em progresso, e é um
@@ -229,8 +225,7 @@ dessa forma que pretende gerenciar o branch.
 Dessa forma também é possível para um push falhar quando outras pessoas tem o 
 direito de enviar para o mesmo repositório. Nesse caso, a solução correta para 
 tentar re-enviar depois da primeira atualização de seu trabalho: qualquer um 
-pull, ou um fetch seguido por um rebase; veja o 
-<<setting-up-a-shared-repository,next section>> e
+pull, ou um fetch seguido por um rebase; veja a próxima seção e 
 linkgit:gitcvs-migration[7] para mais informações.
 
 [gitcast:c8-dist-workflow]("GitCast #8: Fluxo de Trabalho Distribuido")
