@@ -84,7 +84,7 @@ equivalente a:
 
 	git log master^^
 
-Você também pode continuar fazendo isso. Os sequintes formatos apontarão para o
+Você também pode continuar fazendo isso. Os seguintes formatos apontarão para o
 mesmo commit:
 
 	git log master^^^^^^

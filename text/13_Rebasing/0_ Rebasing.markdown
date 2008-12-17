@@ -1,6 +1,6 @@
 ﻿## Rebasing ##
 
-Suponha que você criou um branch "mywork" sobre um branch remoto "origin".
+Suponha que você crie um branch "mywork" sobre um branch remoto "origin".
 
     $ git checkout -b mywork origin
 
@@ -14,19 +14,19 @@ Agora você faz algum trabalho, criando dois novos commits.
     $ git commit
     ...
 
-Enquanto isso, alguém também faz algum trabalho criando dois novos commits 
+Enquanto isso, alguém também faz algum trabalho criando dois novos commits
 sobre o branch origin.
-Nisso ambos 'origin' e 'mywork' avançam seus trabalhos, existindo divergências 
+Nisso ambos 'origin' e 'mywork' avançam seus trabalhos, existindo divergências
 entre eles.
 
 [fig:rebase1]
 
-Neste ponto, você poderia usar "pull" para juntar suas alterações de volta 
+Neste ponto, você poderia usar "pull" para juntar suas alterações de volta
 nele; o resultado criará um novo commit através do merge, como isso:
 
 [fig:rebase2]
 
-Contudo se você prefere manter o histórico em 'mywork', como uma simples série 
+Contudo se você prefere manter o histórico em 'mywork', como uma simples série
 de commits sem qualquer merge, ao invés disso você pode escolher usar
 linkgit:git-rebase[1]:
 
@@ -35,23 +35,23 @@ linkgit:git-rebase[1]:
 
 Isso removerá cada um dos seus commits de 'mywork', temporariamente salvando
 eles como patches (em um diretório chamado ".git/rebase"), atualizar 'mywork' para
-apontar para a última versão de 'origin', então aplicar cada um dos patches salvos 
+apontar para a última versão de 'origin', então aplicar cada um dos patches salvos
 para o novo 'mywork'.
 
 [fig:rebase3]
 
 Uma vez que ('mywork') é atualizado para apontar para o mais novo objeto commit
-criado, seus velhos commits serão abandonados. Eles provavelmente serão 
+criado, seus velhos commits serão abandonados. Eles provavelmente serão
 removidos se você executar a coleta de lixo. (see linkgit:git-gc[1])
 
 [fig:rebase4]
 
-Então agora podemos ver a diferença em nosso histórico entre um merge e um 
+Então agora podemos ver a diferença em nosso histórico entre um merge e um
 rebase executado:
 
 [fig:rebase5]
 
-No processo de rebase, ele pode descobrir alguns conflitos. Nesse caso ele 
+No processo de rebase, ele pode descobrir alguns conflitos. Nesse caso ele
 interromperá e permitirá a você corrigir os conflitos; depois que corrigí-los,
 use "git-add" para atualizar o index com esse conteúdo, e então, ao invés de
 executar git-commit, só execute
