@@ -1,27 +1,27 @@
 ﻿## Rebasing Interativo ##
 
 Você pode também realizar um rebase interativamente. Isso é usado muitas vezes
-para re-escrever seus próprios objetos commit antes de enviá-los para algum 
+para re-escrever seus próprios objetos commit antes de enviá-los para algum
 lugar. Isso é uma forma fácil de dividir, juntar, ou re-ordenar os commits
-antes de compartilhá-los com os outros. Você pode também usá-lo para limpar 
-commits que você tenha baixado de alguém quando estiver aplicando ele 
+antes de compartilhá-los com os outros. Você pode também usá-lo para limpar
+commits que você tenha baixado de alguém quando estiver aplicando eles
 localmente.
 
 Se você tem um número de commits que você gostaria de alguma maneira modificar
-durante o rebase, você pode invocar o modo interativo passando um '-i' ou 
+durante o rebase, você pode invocar o modo interativo passando um '-i' ou
 '--interactive' para o comando 'git rebase'.
 
 	$ git rebase -i origin/master
 
-Isso invocará o modo de rebase interativo sobre todos os commits que você tem 
+Isso invocará o modo de rebase interativo sobre todos os commits que você tem
 feito desde a última vez que você realizou um pull (ou merge de um repositório
 origin).
 
 Para ver de antemão quais são os commits, você pode executar dessa forma:
-	
+
 	$ git log origin/master..
 
-Uma vez que você rodar o comando 'rebase -i origin/master', você será levado 
+Uma vez que você rodar o comando 'rebase -i origin/master', você será levado
 para o seu editor com algo parecido com isso:
 
 	pick fc62e55 added file_size
@@ -55,8 +55,8 @@ ação especificada.
 Se 'pick' é especificado, ele simplesmente tentará aplicar o patch e salvar o
 commit com a mesma mensagem de antes.
 
-Se 'squash' é especificado, ele combinará aquele commit com um anterior para 
-criar um novo commit. Você cairá novamente em seu editor para juntar as 
+Se 'squash' é especificado, ele combinará aquele commit com um anterior para
+criar um novo commit. Você cairá novamente em seu editor para juntar as
 mensagens de commit dos dois commits que agora são combinados. Então, se você
 sair do editor com isso:
 
@@ -91,10 +91,10 @@ Então você terá que criar uma única mensagem de commit dele:
 	This reverts commit fc62e5543b195f18391886b9f663d5a7eca38e84.
 
 Uma vez que você tem editado a mensagem de commit e saido do editor,
-o commit será salvo com a sua nova mensagem.    
+o commit será salvo com a sua nova mensagem.
 
 Se 'edit' é especificado, fará a mesma coisa, mas irá parar antes
-de mover para o próximo commit e o levará para a linha de comando para você 
+de mover para o próximo commit e o levará para a linha de comando para você
 poder corrigir o commit, ou modificar o conteúdo do commit de alguma forma.
 
 Se você quisesse dividir um commit, por exemplo, você especificaria 'edit' para
@@ -106,9 +106,9 @@ esse commit:
 	pick   76b9da6 added the apply command
 	pick   c264051 Revert "added file_size" - not implemented correctly
 
-E então quando você for levado para a linha de comando, você reverterá aquele 
-commit em dois (ou mais) novos. Digamos que o 21d80a5 modificou dois arquivos, 
-arquivo1 e arquivo2, e você quisesse dividir eles em commits separados. Você 
+E então quando você for levado para a linha de comando, você reverte aquele
+commit em dois (ou mais) novos. Digamos que o 21d80a5 modificou dois arquivos,
+arquivo1 e arquivo2, e você quisesse dividir eles em commits separados. Você
 poderia fazer isso depois que o rebase deixá-lo na linha de comando:
 
 	$ git reset HEAD^
@@ -118,9 +118,9 @@ poderia fazer isso depois que o rebase deixá-lo na linha de comando:
 	$ git commit 'second part of split commit'
 	$ git rebase --continue
 
-E agora ao invés dos 5 commits, você terá 6.	
+E agora ao invés dos 5 commits, você terá 6.
 
-A última coisa útil que o modo interativo do rebase pode fazer é retirar 
+A última coisa útil que o modo interativo do rebase pode fazer é retirar
 commits para você. Se ao invés de escolher 'pick', 'squash' ou 'edit' para a
-linha do commit, você simplesmente remove a linha e isso removerá o commit do 
+linha do commit, você simplesmente remove a linha e isso removerá o commit do
 histórico.
