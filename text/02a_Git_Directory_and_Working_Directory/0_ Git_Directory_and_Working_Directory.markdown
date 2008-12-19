@@ -7,7 +7,7 @@ informações do seu projeto - incluindo todos os objetos (commits, trees,blobs,
 tags), todos os ponteiros onde os diferentes branches estão e muito mais.
 
 Existe somente um Diretório Git por projeto (o oposto de um por sub diretório
-como no SVN our CVS), e que o diretório é (por padrão, embora não 
+como no SVN ou CVS), e que o diretório é (por padrão, embora não 
 necessariamente) '.git' na raiz do seu projeto. Se você olha no conteúdo desse
 diretório, você pode ver todos os seus importantes arquivos:
 
@@ -27,7 +27,7 @@ diretório, você pode ver todos os seus importantes arquivos:
 
 ### O Diretório de Trabalho ###
 
-O 'diretório de trabalho' do Git é o diretório que detém o atual checkout dos 
+O 'diretório de trabalho' do Git é o diretório que detém o checkout atual dos 
 arquivos sobre o qual você está trabalhando. Arquivos nesse diretório são
 frequentemente removidos ou renomeados pelo Git quando você troca de branches - 
 isso é normal. Todos os seus históricos são armazenados no diretório Git; o 

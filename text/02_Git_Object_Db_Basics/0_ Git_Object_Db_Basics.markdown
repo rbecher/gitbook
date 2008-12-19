@@ -42,7 +42,7 @@ que o objeto é, e existem quatro tipos diferentes de objetos:
   como especial. Ele é normalmente usado para identificar certos commits como
   versões/revisões específicas ou alguma coisa junto a aquelas linhas.
 
-Quase tudo do Git é construido através da manipulação dessa simples estrutura
+Quase tudo do Git é construído através da manipulação dessa simples estrutura
 de quatro diferentes tipos de objetos. Eles são organizados dentro se seu
 próprio sistema de arquivos que estão sobre o sistema de arquivos de sua
 máquina.
