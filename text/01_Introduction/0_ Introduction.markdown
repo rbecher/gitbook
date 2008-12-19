@@ -1,6 +1,6 @@
 ﻿## Bem vindo ao Git ##
 
-Bem vindo ao Git - o mais rápido , sistema de controle de versão distribuida.
+Bem vindo ao Git - o mais rápido , sistema de controle de versão distribuída.
 
 Esse livro é um ponto de partida para as pessoas novas no Git que querem
 aprendê-lo tão rapidamente e facilmente quanto possível.
@@ -11,7 +11,7 @@ ferramentas de SCV.
 Essa parte será abordada em 20 minutos.
 
 Depois cobriremos **O Uso básico do Git** - os comandos que usará em 90% do
-do seu tempo. Isso lhe dará uma boa base para usar o Git confortávelmente
+do seu tempo. Isso lhe dará uma boa base para usar o Git confortavelmente
 para a maioria das coisas onde poderá usá-lo. Essa seção levará 30 minutos
 para leitura.
 
@@ -21,7 +21,7 @@ aprendeu na primeira seção. Este mostrará principalmente truques e comandos
 onde se sentirá mais confortável depois que conhece os comandos básicos. 
 
 Depois que você estiver dominado, nós abordaremos **Git Avançado** - comandos 
-que a maioria das pesssoas não usan frequentemente, mas podem ser muito úteis
+que a maioria das pessoas não usam frequentemente, mas podem ser muito úteis
 em certas situações. Aprendendo esses comandos deverá cobrir o seu 
 conhecimento sobre o git no dia a dia; você se tornará um mestre do Git!                                                                                                             
 

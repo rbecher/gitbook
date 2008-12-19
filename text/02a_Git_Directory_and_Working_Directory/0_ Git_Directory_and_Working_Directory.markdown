@@ -1,35 +1,35 @@
-## Diretório Git e Diretório de Trabalho ##
+## DiretÃ³rio Git e DiretÃ³rio de Trabalho ##
 
-### O Diretório Git ###
+### O DiretÃ³rio Git ###
 
-O 'diretório git' é o diretório que armazena todos os históricos Git e meta
-informações do seu projeto - incluindo todos os objetos (commits, trees,blobs,
-tags), todos os ponteiros onde os diferentes branches estão e muito mais.
+O 'diretÃ³rio git' Ã© o diretÃ³rio que armazena todos os histÃ³ricos Git e meta
+informaÃ§Ãµes do seu projeto - incluindo todos os objetos (commits, trees,blobs,
+tags), todos os ponteiros onde os diferentes branches estÃ£o e muito mais.
 
-Existe somente um Diretório Git por projeto (o oposto de um por sub diretório
-como no SVN our CVS), e que o diretório é (por padrão, embora não 
-necessariamente) '.git' na raiz do seu projeto. Se você olha no conteúdo desse
-diretório, você pode ver todos os seus importantes arquivos:
+Existe somente um DiretÃ³rio Git por projeto (o oposto de um por sub diretÃ³rio
+como no SVN ou CVS), e que o diretÃ³rio Ã© (por padrÃ£o, embora nÃ£o 
+necessariamente) '.git' na raiz do seu projeto. Se vocÃª olha no conteÃºdo desse
+diretÃ³rio, vocÃª pode ver todos os seus importantes arquivos:
 
     $>tree -L 1
     .
     |-- HEAD         # aponta para o seu branch atual
-    |-- config       # suas configurações preferenciais
-    |-- description  # descrição do seu projeto 
+    |-- config       # suas configuraÃ§Ãµes preferenciais
+    |-- description  # descriÃ§Ã£o do seu projeto 
     |-- hooks/       # pre/post action hooks
-    |-- index        # arquivo de index (veja a próxima seção)
-    |-- logs/        # um histórico de onde seus branches tem estado
+    |-- index        # arquivo de index (veja a prÃ³xima seÃ§Ã£o)
+    |-- logs/        # um histÃ³rico de onde seus branches tem estado
     |-- objects/     # seus objetos (commits, trees, blobs, tags)
     `-- refs/        # ponteiros para os seus branches
 
-(podem existir alguns outros arquivos/diretórios aqui mas eles não são importantes agora)
+(podem existir alguns outros arquivos/diretÃ³rios aqui mas eles nÃ£o sÃ£o importantes agora)
 
 
-### O Diretório de Trabalho ###
+### O DiretÃ³rio de Trabalho ###
 
-O 'diretório de trabalho' do Git é o diretório que detém o atual checkout dos 
-arquivos sobre o qual você está trabalhando. Arquivos nesse diretório são
-frequentemente removidos ou renomeados pelo Git quando você troca de branches - 
-isso é normal. Todos os seus históricos são armazenados no diretório Git; o 
-diretório de trabalho é simplesmente um lugar temporário de checkout onde você 
-pode modificar os arquivos até o próximo commit.
+O 'diretÃ³rio de trabalho' do Git Ã© o diretÃ³rio que detÃ©m o checkout atual dos 
+arquivos sobre o qual vocÃª estÃ¡ trabalhando. Arquivos nesse diretÃ³rio sÃ£o
+frequentemente removidos ou renomeados pelo Git quando vocÃª troca de branches - 
+isso Ã© normal. Todos os seus histÃ³ricos sÃ£o armazenados no diretÃ³rio Git; o 
+diretÃ³rio de trabalho Ã© simplesmente um lugar temporÃ¡rio de checkout onde vocÃª 
+pode modificar os arquivos atÃ© o prÃ³ximo commit.

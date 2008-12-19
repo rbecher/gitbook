@@ -15,7 +15,7 @@ Supondo que temos um SHA para um blob, podemos examinar seu conteúdo assim:
     ...
 
 Um objeto "blob" não é nada mais que um grande pedaço de dados binários. Ele
-não se referencia a nada ou possue atributos de qualquer tipo, nem mesmo um nome
+não se referencia a nada ou possui atributos de qualquer tipo, nem mesmo um nome
 de arquivo.  
 
 Visto que o blob é inteiramente definido por esses dados, se dois arquivos em 
