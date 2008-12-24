@@ -133,7 +133,7 @@ das alterações. Isso é na verdade mais conveniente, e permite claramente a vo
 separar trabalho pessoal em progresso do trabalho visível publicamente.
 
 Você continuará a fazer seu trabalho diário em seu repositório pessoal, mas 
-periódicamente realizar um "push" das alterações de seu repositório pessoal
+periodicamente realizar um "push" das alterações de seu repositório pessoal
 para o seu repositório público, permitindo os outros desenvolvedores realizar 
 pulls daquele repositório. Então o fluxo de alterações, na situação onde existe
 um outro desenvolvedor com repositório público, parece com isso:
@@ -215,7 +215,7 @@ branch com um sinal de +:
 
 Normalmente quando um branch head é modificado em um repositório público, ele
 é modificado para apontar para um descendente desse commit que ele apontou antes.
-Forçando um push nessa situação, você quebra aquela convênção.
+Forçando um push nessa situação, você quebra aquela convenção.
 
 Contudo, essa é uma prática comum para pessoas que precisam de uma forma 
 simples para publicar uma série de patch de um trabalho em progresso, e é um

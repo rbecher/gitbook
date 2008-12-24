@@ -45,7 +45,7 @@ para o master, execute
     $ git merge experimental
 
 Se as mudanças não conflitarem, você terminou aqui. Se existem conflitos,
-marcas serão deixadas nos arquivos problemáticos monstrando os conflitos;
+marcas serão deixadas nos arquivos problemáticos mostrando os conflitos;
 
     $ git diff
 
@@ -97,7 +97,7 @@ conteúdo e executar o git commit, como você faria normalmente quando modifica
 um arquivo.
 
 Se você examinar o resultado do commit usando o gitk, você verá que ele
-possue dois pais: um apontando para o topo do branch atual, e um para topo
+possui dois pais: um apontando para o topo do branch atual, e um para topo
 do outro branch.
 
 ### Resolvendo um merge ###
@@ -130,7 +130,7 @@ e então
 
 Veja que a mensagem de commit já estará preenchida nele para você com
 algumas informações sobre o merge. Normalmente você pode usá-la sem mudança 
-nessa mensagem padrão, mas você pode adicionar um comentario adicional se
+nessa mensagem padrão, mas você pode adicionar um comentário adicional se
 desejado.
 
 Tudo acima é o que você precisa saber para resolver um simples merge. Mas o git

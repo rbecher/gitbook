@@ -40,8 +40,8 @@ que irá automaticamente avisar sobre quaisquer arquivos modificados (mas não
 novos), adicioná-los no index, e realizar o commit, tudo de uma vez.
 
 Uma nota sobre as mensagens de commit: Embora não necessário, é uma boa
-idéia iniciar a mensagem de commit em uma linha curta (menos do que
-50 caracteres) resumindo as mundanças, seguido por uma linha em branco e então,
+ideia iniciar a mensagem de commit em uma linha curta (menos do que
+50 caracteres) resumindo as mudanças, seguido por uma linha em branco e então,
 mais uma descrição profunda. Ferramentas que transformam commits em emails, por
 exemplo, usam a primeira linha para o Assunto: e o resto da mensagem do commit 
 para o corpo do email.

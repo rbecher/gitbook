@@ -1,4 +1,4 @@
-﻿        ## Revisando o Histórico - Git Log ##
+﻿## Revisando o Histórico - Git Log ##
 
 O comando linkgit:git-log[1] pode mostrar listas de commits. Com ele
 são mostrados todos commits atingíveis a partir do commit pai; mas você

@@ -37,7 +37,7 @@ Finalmente, você pode executar
     $ git diff HEAD
 
 que mostra as alterações no diretório de trabalho atual desde seu último commit;
-o que estará sendo commitado se você executrar "git commit -a".
+o que estará sendo commitado se você executar "git commit -a".
 
 ### Mais opções Diff ###
 
@@ -46,7 +46,7 @@ do projeto, você pode executar algo como:
 
     $ git diff test
 
-Isso mostrará a você a direfença entre seu diretório de trabalho atual e o 
+Isso mostrará a você a diferença entre seu diretório de trabalho atual e o 
 snapshot sobre o branch 'test'. Você também pode limitar a comparação para um
 arquivo específico ou sub diretório pela adição do *path limiter*:
 

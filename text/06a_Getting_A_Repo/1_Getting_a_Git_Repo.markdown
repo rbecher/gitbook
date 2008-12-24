@@ -28,7 +28,7 @@ que você tenha. Nesses casos você deveria então ter um novo diretório chamad
 basicamente uma cópia do que estava no servidor.
 
 Por padrão, o Git nomeará o novo diretório do projeto de sua clonagem de acordo
-com o nome do arquivo no ultímo de nível na URL antes de '.git'.
+com o nome do arquivo no último de nível na URL antes de '.git'.
 (ex.: *git clone
 http://git.kernel.org/linux/kernel/git/torvalds/linux-2.6.git* resultará em um 
 novo diretório chamado 'linux-2.6')
