@@ -1,7 +1,7 @@
 ﻿## O Index do Git ##
 
 O index do Git é usado como uma área de preparação entre o seu diretório de
-trabalho e o seu repositório. Você pode usar o index para contruir um conjunto
+trabalho e o seu repositório. Você pode usar o index para construir um conjunto
 de modificações no qual você quer levar juntos para o próximo commit. Quando
 você cria um commit, o que é commitado é o que está no index atualmente, não o
 que está no seu diretório de trabalho.

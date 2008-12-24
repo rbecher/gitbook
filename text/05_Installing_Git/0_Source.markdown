@@ -10,5 +10,5 @@ essas linhas :
 Você precisará dessas bibliotecas instaladas [expat](http://expat.sourceforge.net/), 
 [curl](http://curl.linux-mirror.org),
 [zlib](http://www.zlib.net), e [openssl](http://www.openssl.org) 
-- embora com uma possível exceção do *expat*, esse normalmenete já existe 
+- embora com uma possível exceção do *expat*, esse normalmente já existe 
 no sistema.
