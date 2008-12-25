@@ -1,8 +1,8 @@
-﻿## Procurando Erros - Git Blame ##
+﻿## Encontrando Erros - Git Blame ##
 
 O comando linkto:git-blame[1] é realmente útil para entender quem modificou
-que seção de um arquivo. Se você executar 'git blame [nomedoarquivo]' você 
-conseguirá visualizar o arquivo inteiro com o último SHA do commit, data e 
+que seção de um arquivo. Se você executar 'git blame [nomedoarquivo]' você
+conseguirá visualizar o arquivo inteiro com o último SHA do commit, data e
 autor para cada linha dentro do arquivo.
 
 	$ git blame sha1_file.c
@@ -25,7 +25,7 @@ o danificou, para ajudar você a ver quem alterou que linha por último.
 
 Você pode também especificar o inicio e o fim da linha para o blame:
 
-	$>git blame -L 160,+10 sha1_file.c 
+	$>git blame -L 160,+10 sha1_file.c
 	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       160)}
 	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       161)
 	0fcfd160 (Linus Torvalds 2005-04-18 13:04:43 -0700       162)/*
@@ -34,5 +34,5 @@ Você pode também especificar o inicio e o fim da linha para o blame:
 	0fcfd160 (Linus Torvalds 2005-04-18 13:04:43 -0700       165) * filename.
 	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       166) *
 	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       167) * Also note that this returns the location
-	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       168) * SHA1 file can happen from any alternate 
+	ace1534d (Junio C Hamano 2005-05-07 00:38:04 -0700       168) * SHA1 file can happen from any alternate
 	d19938ab (Junio C Hamano 2005-05-09 17:57:56 -0700       169) * DB_ENVIRONMENT environment variable if i

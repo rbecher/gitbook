@@ -2,7 +2,7 @@
 
 ### Garantindo bom desempenho ###
 
-Em grandes repositórios, git conta com a compressão para manter as informações 
+Em grandes repositórios, git conta com a compressão para manter as informações
 do histórico que ocupam muito espaço no disco ou memória.
 
 Essa compressão não é realizado automaticamente. Portanto você deveria
@@ -11,12 +11,12 @@ executar ocasionalmente linkgit:git-gc[1]:
     $ git gc
 
 para recomprimir o arquivo. Isso pode consumir muito tempo, então você pode
-preferir executar git-gc quando não estiver trabalhando.    
+preferir executar git-gc quando não estiver trabalhando.
 
 
 ### Garantindo a confiabilidade ###
 
-O comando linkgit:git-fsck[1] executa um número de verificações de consistência
+O comando linkgit:git-fsck[1] executa várias verificações de consistência
 sobre o repositório, e relata algum problema. Isso pode levar algum tempo.
 De longe, o aviso mais comum é sobre objetos "dangling":
 

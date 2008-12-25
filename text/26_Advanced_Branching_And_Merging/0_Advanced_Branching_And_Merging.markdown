@@ -2,8 +2,8 @@
 
 ### Conseguindo ajuda na resolução de conflitos durante o merge ###
 
-Todas as alterações que o git foi capaz de realizar o merge automaticamente
-já estão adicionadas no arquivo index, então linkgit:git-diff[1] mostrará 
+Todas as alterações que o merge foi capaz de realizar automaticamente já estão 
+adicionadas no arquivo index, então linkgit:git-diff[1] mostrará
 somente os conflitos. Ele usa uma sintaxe incomum:
 
     $ git diff
@@ -18,8 +18,8 @@ somente os conflitos. Ele usa uma sintaxe incomum:
     + Goodbye
     ++>>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
 
-Recorde que depois que o commit resolver esse conflito terão dois pais ao invés
-de um como de costume: um pai será o HEAD, a ponta do branch atual; o outro 
+Lembre-se que o commit que será realizado depois que resolvermos esses conflitos
+terão 2 pais ao invés de um: um pai será o HEAD, a ponta do branch atual; o outro
 será a ponta do outro branch, que é armazenado temporariamente no MERGE_HEAD.
 
 Durante o merge, o index retém três versões de cada arquivo. Cada um desses
@@ -29,22 +29,22 @@ três "estágios do arquivo" representam uma versão diferente do arquivo:
 	$ git show :2:file.txt	# a versão do HEAD.
 	$ git show :3:file.txt	# a versão do MERGE_HEAD.
 
-Quando você pergunta ao linkgit:git-diff[1] para mostrar os conflitos, ele 
+Quando você pergunta ao linkgit:git-diff[1] para mostrar os conflitos, ele
 executa um diff de três-passos entre os resultados do merge conflitantes na
 árvore de trabalho com o estágio 2 e 3 para mostrar somente de qual o conteúdo
-vem de ambos os lados, misturados (em outras palavras, quando o resultado do 
-merge vem somente do estágio 2, que parte não está conflitando e não é 
-mostrada. Mesmo para o estágio 3).
+vem de ambos os lados, misturados (em outras palavras, quando o resultado do
+merge vem somente do estágio 2, que parte não está conflitando e não é
+mostrada. O mesmo para o estágio 3).
 
 O diff acima mostra a diferença entre a versão da árvore de trabalho do file.txt
 e as versões do estágio 2 e estágio 3. Então ao invés de preceder cada linha
-com um simples "+" ou "-", ele agora usa duas colunas: a primeira coluna é 
+com um simples "+" ou "-", ele agora usa duas colunas: a primeira coluna é
 usada para diferenciar entre o primeiro pai e a cópia do diretório de trabalho
-atual, e o segundo para diferenciar entre o segungo pai e a cópia do diretório 
+atual, e o segundo para diferenciar entre o segungo pai e a cópia do diretório
 de trabalho. (Veja a seção "COMBINED DIFF FORMAT" do linkgit:git-diff-files[1]
 para mais detalhes do formato.)
 
-Depois da resolução dos conflitos de forma óbvia (mas antes de atualizar o 
+Depois da resolução dos conflitos de maneira óbvia (mas antes de atualizar o
 index), o diff se parecerá com isso:
 
     $ git diff
@@ -59,9 +59,9 @@ index), o diff se parecerá com isso:
 
 Isso mostra que nossa versão corrigida apagou "Hello world" do primeiro
 pai, apagou "Goodbye" do segundo pai, e adicionou "Goodbye world", que estava
-ausente de ambos anteriormente. 
+ausente de ambos anteriormente.
 
-Algumas opções especiais do diff permitem diferenciar o diretório de trabalho 
+Algumas opções especiais do diff permitem diferenciar o diretório de trabalho
 contra qualquer estágio:
 
     $ git diff -1 file.txt		# diff contra o estágio 1
@@ -77,15 +77,15 @@ para merges:
     $ git log --merge
     $ gitk --merge
 
-Isso mostrará todos os commits que existem somente sobre HEAD ou sobre 
+Isso mostrará todos os commits que existem somente sobre HEAD ou sobre
 MERGE_HEAD, e qual tocou em um arquivo sem merge.
 
-Você também pode usar linkgit:git-mergetool[1], que deixa você realizar o 
+Você também pode usar linkgit:git-mergetool[1], que deixa você realizar o
 merge de arquivos sem merge usando ferramentas externas como emacs ou kdiff3.
 
 Cada vez que você resolve os conflitos dentro do arquivo e atualiza o index:
 
     $ git add file.txt
 
-os diferentes estágios daquele arquivo será "collapsed", depois que git-diff
+os diferentes estágios daquele arquivo serão "collapsed", depois que git-diff
 não mostrar (por padrão) diferenças para aquele arquivo.

@@ -2,7 +2,7 @@
 
 ### Enviando patches para um projeto ###
 
-Se você já possui algumas alterações, a forma mais simples de fazê-lo é 
+Se você já possui algumas alterações, a forma mais simples de fazê-lo é
 enviá-los como patches por email:
 
 Primeiro, use linkgit:git-format-patch[1]; por exemplo:
@@ -23,25 +23,25 @@ preferem que os patches sejam manipulados.
 
 Git também provê uma ferramenta chamada linkgit:git-am[1] ( uma abreviação de
 "apply mailbox"), para importar uma série de patches recebidos.
-Grave todas as mensagens que contém patches, em orderm, para um arquivo mailbox 
+Grave todas as mensagens que contém patches, em orderm, para um arquivo mailbox
 simples, digamos "patches.mbox", então execute
 
     $ git am -3 patches.mbox
 
 Git aplicará cada patch em ordem; se algum conflito for encontrado, ele irá
-parar, e você pode corrigir os conflitos como descrito em 
-"<<resolving-a-merge,Resolvendo um merge>>". (A opção "-3" chama o git para 
-realizar um merge; se você prefere exatamente abortar e deixar sua árvore e 
+parar, e você pode corrigir os conflitos como descrito em
+"<<resolving-a-merge,Resolvendo um merge>>". (A opção "-3" chama o git para
+realizar um merge; se você prefere exatamente abortar e deixar sua árvore e
 index intácta, você pode omitir essa opção.)
 
-Somente o index é atualizado com o resultado da resolução do conflito, ao invés
+Uma vez que o index é atualizado com o resultado da resolução do conflito, ao invés
 de criar um novo commit, execute
 
     $ git am --resolved
 
 e o git criará o commit para você e continua aplicando o restante dos patches do
-mailbox.    
+mailbox.
 
-O resultado final será uma série de commits, um para cada patch no mailbox 
-original,cada um com o autor e a mensagem de commit trazido da mensagem contido
+O resultado final será uma série de commits, um para cada patch no mailbox
+original,cada um com o autor e a mensagem de commit trazido da mensagem contida
 em cada patch.
