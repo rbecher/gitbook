@@ -90,7 +90,7 @@ Então você terá que criar uma única mensagem de commit dele:
 
 	This reverts commit fc62e5543b195f18391886b9f663d5a7eca38e84.
 
-Uma vez que você tem editado a mensagem de commit e saido do editor,
+Uma vez que você tem editado a mensagem de commit e saído do editor,
 o commit será salvo com a sua nova mensagem.
 
 Se 'edit' é especificado, fará a mesma coisa, mas irá parar antes
