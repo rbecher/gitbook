@@ -14,7 +14,7 @@ linkgit:git-diff[1] é uma ferramenta incrivelmente útil para entender as
 alterações que existem entre dois pontos quaisquer no histórico de seu projeto,
 ou para ver o que as pessoas estão tentando introduzir em novos branches, etc.
 
-### O que você irá commitar ###
+### O que você levará para o commit ###
 
 Você usará normalmente linkgit:git-diff[1] para entender as diferenças entre
 seu último commit, seu index, e seu diretório de trabalho.
@@ -30,14 +30,14 @@ executar
     $ git diff --cached
 
 que mostrará a você as diferenças entre o index e o seu último commit;
-o que estará sendo commitado se você executar "git commit" sem a opção
+o que será levado para o commit se você executar "git commit" sem a opção
 "-a".
 Finalmente, você pode executar
 
     $ git diff HEAD
 
 que mostra as alterações no diretório de trabalho atual desde seu último commit;
-o que estará sendo commitado se você executar "git commit -a".
+o que será levado para o commit se você executar "git commit -a".
 
 ### Mais opções Diff ###
 

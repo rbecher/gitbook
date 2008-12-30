@@ -4,8 +4,8 @@ Altere alguns arquivos, então adicione seus conteúdos alterados para o index:
 
     $ git add file1 file2 file3
 
-Você agora está pronto para realizar o commit. Você pode ver sobre o que 
-será commitado usando linkgit:git-diff[1] com a opção --cached:
+Você agora está pronto para realizar o commit. Você pode ver o que será levado
+para commit usando linkgit:git-diff[1] com a opção --cached:
 
     $ git diff --cached
 

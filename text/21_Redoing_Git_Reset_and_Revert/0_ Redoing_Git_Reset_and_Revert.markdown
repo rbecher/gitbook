@@ -1,15 +1,15 @@
 ﻿## Desfazendo no Git - Reset, Checkout e Revert ##
 
 Git provê múltiplos métodos para corrigir erros quando você está desenvolvendo.
-Selecionar um método apropriado depende se possui ou não erros commitados, e
-se você commitou os erros, se você compartilhou os commits com problemas com
-alguém.
+Selecionar um método apropriado depende se possui ou não erros nos 
+commits já realizados, se você realizou commits com erros, e se você compartilhou
+os commits com problemas com alguém.
 
-### Corrigindo erros não commitados ###
+### Corrigindo erros que ainda não foram para o commit ###
 
-Se você cometeu erros na sua árvore de trabalho, mas ainda não commitou
-esses erros, você pode retornar a árvore de trabalho inteira para o último
-estado commitado com:
+Se você cometeu erros na sua árvore de trabalho, mas ainda não fez o commit
+desses erros, você pode retornar a árvore de trabalho inteira para o estado do 
+último commit com:
 
     $ git reset --hard HEAD
 
@@ -30,7 +30,7 @@ irá restaurar hello.rb da versão no HEAD, para que ambos
 "git diff hello.rb" e "git diff --cached hello.rb" retornem nenhuma diferença.
 
 
-### Corrigindo erros commitados ###
+### Corrigindo erros que foram para o commit ###
 
 Se você realizou um commit e depois se arrependeu, existem dois caminhos
 fundamentalmente diferentes para resolver o problema:
@@ -68,8 +68,8 @@ para corrigir manualmente os conflitos, bem na hora da resolução do merge.
 
 #### Corrigindo um erro através da modificação de um commit ####
 
-Se você já commitou algo mas percebe que você precisa consertá-lo, versões
-recentes do linkgit:git-commit[1] suporta uma flag **--amend** que instrui
+Se você já realizou o commit de algo mas percebe que precisa consertá-lo, 
+versões recentes do linkgit:git-commit[1] suporta uma flag **--amend** que instrui
 o git para substituir o commit HEAD com um novo, baseado no conteúdo atual do
 index. Isso dá a você uma oportunidade para adicionar arquivos que você
 esqueceu de adicionar ou corrigir a mensagem do commit, antes de enviar as

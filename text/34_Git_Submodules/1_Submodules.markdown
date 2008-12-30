@@ -184,7 +184,7 @@ submodule, outros não serão capazer de clonar o repositório.
 Você também não deveria voltar branches em um submodule além de commits que sempre
 foram gravados em algum superproject.
 
-Não é seguro executar `git submodule update` se você tem feito e commitado
+Não é seguro executar `git submodule update` se você tem feito e realizado commit das
 alterações dentro do submodule sem verificar o branch primeiro. Eles serão
 sobrescritos silenciosamente:
 

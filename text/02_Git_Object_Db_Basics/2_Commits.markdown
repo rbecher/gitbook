@@ -52,7 +52,7 @@ atualmente armazenado no index.
 
 ### O Modelo de Objeto ###
 
-Então, agora o que vimos os 3 pricipais tipos de objetos (blob, tree e commit),
+Então, agora o que vimos os 3 principais tipos de objetos (blob, tree e commit),
 vamos dar uma rápida olhada em como eles todos se relacionam juntos.
 
 Se tivéssemos um simples projeto com a seguinte estrutura de diretório:
