@@ -28,10 +28,9 @@ simples, digamos "patches.mbox", então execute
 
     $ git am -3 patches.mbox
 
-
 Git aplicará cada patch em ordem; se algum conflito for encontrado, ele irá
-parar, e você pode corrigir os conflitos. (A opção "-3" informa ao git para
-realizar um merge; se você prefere exatamente abortar e deixar sua árvore e
+parar, e você pode manualmente corrigir os conflitos. (A opção "-3" informa ao git para
+realizar um merge; se você prefere só abortar e deixar sua árvore e
 index intácta, você pode omitir essa opção.)
 
 Uma vez que o index é atualizado com o resultado da resolução do conflito, ao invés

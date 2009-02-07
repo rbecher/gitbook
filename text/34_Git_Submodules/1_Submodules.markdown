@@ -63,7 +63,7 @@ Agora crie um superproject e adicione todos os submodules:
     $ git init
     $ for i in a b c d
     do
-        git submodule add ~/git/$i
+        git submodule add ~/git/$i $i
     done
 
 NOTA: Não use URLs locais aqui se você planeja publicar seu superproject!
@@ -104,7 +104,7 @@ Os diretórios do submodule existem, mas estão vazios:
 
 NOTA: Os nomes dos objetos commit mostrado acima serão diferentes para você,
 mas eles deverão corresponder aos nomes dos objetos commit do HEAD em seu
-repositório. Você pode verificar ele executando `git ls-remote ../a`.
+repositório. Você pode verificar ele executando `git ls-remote ../git/a`.
 
 Realizar um pull dos submodules é um processo de dois passos. Primeiro execute
 `git submodule init` para adicionar a URL do repositório submodule para
@@ -180,6 +180,48 @@ submodule, outros não serão capazer de clonar o repositório.
     error: pathspec '261dfac35cb99d380eb966e102c1197139f7fa24' did not match any file(s) known to git.
     Did you forget to 'git add'?
     Unable to checkout '261dfac35cb99d380eb966e102c1197139f7fa24' in submodule path 'a'
+
+Se você está selecionando um submodule para realizar um commit manualmente,
+tenha cuidado para não esquecer as barras quando especificar o path. Com as barras
+adicionadas, Git assumirá que você está removendo o submodule e verificando que o
+conteúdo do diretório contém um repositório.
+
+    $ cd ~/git/super/a
+    $ echo i added another line to this file >> a.txt
+    $ git commit -a -m "doing it wrong this time"
+    $ cd ..
+    $ git add a/
+    $ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use "git reset HEAD <file>..." to unstage)
+    #
+    #       deleted:    a
+    #       new file:   a/a.txt
+    #
+    # Modified submodules:
+    #
+    # * a aa5c351...0000000 (1):
+    #   < Initial commit, submodule a
+    #
+
+Para corrigir o index depois de realizar dessa operação, reset as modificações e
+então adicione o submodule sem a barra.
+
+    $ git reset HEAD A
+    $ git add a
+    $ git status
+    # On branch master
+    # Changes to be committed:
+    #   (use "git reset HEAD <file>..." to unstage)
+    #
+    #       modified:   a
+    #
+    # Modified submodules:
+    #
+    # * a aa5c351...8d3ba36 (1):
+    #   > doing it wrong this time
+    #
 
 Você também não deveria voltar branches em um submodule além de commits que sempre
 foram gravados em algum superproject.
