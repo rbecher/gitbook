@@ -1,6 +1,6 @@
 ﻿## Encontrando Erros - Git Blame ##
 
-O comando linkto:git-blame[1] é realmente útil para entender quem modificou
+O comando linkgit:git-blame[1] é realmente útil para entender quem modificou
 que seção de um arquivo. Se você executar 'git blame [nomedoarquivo]' você
 conseguirá visualizar o arquivo inteiro com o último SHA do commit, data e
 autor para cada linha dentro do arquivo.
