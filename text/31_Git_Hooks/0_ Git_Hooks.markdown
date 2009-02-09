@@ -1,20 +1,20 @@
-## Git Hooks ##
+### Git Hooks ###
 
 Hooks are little scripts you can place in $GIT_DIR/hooks directory to trigger
-action at certain points. When git-init is run, a handful example hooks are 
-copied in the hooks directory of the new repository, but by default they are 
+action at certain points. When git-init is run, a handful example hooks are
+copied in the hooks directory of the new repository, but by default they are
 all disabled. To enable a hook, rename it by removing its .sample suffix.
 
 
 ### applypatch-msg ###
 
     GIT_DIR/hooks/applypatch-msg
-    
-This hook is invoked by git-am script. It takes a single parameter, the name 
+
+This hook is invoked by git-am script. It takes a single parameter, the name
 of the file that holds the proposed commit log message. Exiting with non-zero
 status causes git-am to abort before applying the patch.
 
-The hook is allowed to edit the message file in place, and can be used to 
+The hook is allowed to edit the message file in place, and can be used to
 normalize the message into some project standard format (if the project has one).
 It can also be used to refuse the commit after inspecting the message file.
 The default applypatch-msg hook, when enabled, runs the commit-msg hook, if the
@@ -30,7 +30,7 @@ patch is applied, but before a commit is made.
 If it exits with non-zero status, then the working tree will not be committed
 after applying the patch.
 
-It can be used to inspect the current working tree and refuse to make a commit 
+It can be used to inspect the current working tree and refuse to make a commit
 if it does not pass certain test.
 The default pre-applypatch hook, when enabled, runs the pre-commit hook, if the
 latter is enabled.
@@ -39,7 +39,7 @@ latter is enabled.
 ### post-applypatch ###
 
     GIT_DIR/hooks/post-applypatch
-    
+
 This hook is invoked by 'git-am'.  It takes no parameter,
 and is invoked after the patch is applied and a commit is made.
 
@@ -48,7 +48,7 @@ the outcome of 'git-am'.
 
 
 ### pre-commit ###
- 	
+
     GIT_DIR/hooks/pre-commit
 
 This hook is invoked by 'git-commit', and can be bypassed
@@ -67,27 +67,27 @@ to modify the commit message.
 
 Here is an example of a Ruby script that runs RSpec tests before allowing a commit.
 
-	ruby  
-	html_path = "spec_results.html"  
-	`spec -f h:#{html_path} -f p spec` # run the spec. send progress to screen. save html results to html_path  
+	ruby
+	html_path = "spec_results.html"
+	`spec -f h:#{html_path} -f p spec` # run the spec. send progress to screen. save html results to html_path
 
-	# find out how many errors were found  
-	html = open(html_path).read  
-	examples = html.match(/(\d+) examples/)[0].to_i rescue 0  
-	failures = html.match(/(\d+) failures/)[0].to_i rescue 0  
-	pending = html.match(/(\d+) pending/)[0].to_i rescue 0  
+	# find out how many errors were found
+	html = open(html_path).read
+	examples = html.match(/(\d+) examples/)[0].to_i rescue 0
+	failures = html.match(/(\d+) failures/)[0].to_i rescue 0
+	pending = html.match(/(\d+) pending/)[0].to_i rescue 0
 
-	if failures.zero?  
-	  puts "0 failures! #{examples} run, #{pending} pending"  
-	else  
-	  puts "\aDID NOT COMMIT YOUR FILES!"  
-	  puts "View spec results at #{File.expand_path(html_path)}"  
-	  puts  
-	  puts "#{failures} failures! #{examples} run, #{pending} pending"  
-	  exit 1  
+	if failures.zero?
+	  puts "0 failures! #{examples} run, #{pending} pending"
+	else
+	  puts "\aDID NOT COMMIT YOUR FILES!"
+	  puts "View spec results at #{File.expand_path(html_path)}"
+	  puts
+	  puts "#{failures} failures! #{examples} run, #{pending} pending"
+	  exit 1
 	end
 
-    
+
 ### prepare-commit-msg ###
 
     GIT_DIR/hooks/prepare-commit-msg
@@ -220,7 +220,7 @@ If you wrote it in Ruby, you might get the args this way:
 	rev_old, rev_new, ref = STDIN.read.split(" ")
 
 Or in a bash script, something like this would work:
-	
+
 	#!/bin/sh
 	# <oldrev> <newrev> <refname>
 	# update a blame tree
@@ -234,7 +234,7 @@ Or in a bash script, something like this would work:
 		done
 	done
 
-    
+
 ### update ###
 
     GIT_DIR/hooks/update
@@ -282,7 +282,7 @@ unannotated tags to be pushed.
 ### post-receive ###
 
     GIT_DIR/hooks/post-receive
-    
+
 This hook is invoked by 'git-receive-pack' on the remote repository,
 which happens when a 'git-push' is done on a local repository.
 It executes on the remote repository once after all the refs have
@@ -313,7 +313,7 @@ emails.
 ### post-update ###
 
     GIT_DIR/hooks/post-update
-    
+
 This hook is invoked by 'git-receive-pack' on the remote repository,
 which happens when a 'git-push' is done on a local repository.
 It executes on the remote repository once after all the refs have
@@ -354,5 +354,5 @@ to abort.
 
 ### References ###
 
-[Git Hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html)
-* http://probablycorey.wordpress.com/2008/03/07/git-hooks-make-me-giddy/
+[Git Hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html)  
+[Git hooks make me giddy](http://probablycorey.wordpress.com/2008/03/07/git-hooks-make-me-giddy/)
