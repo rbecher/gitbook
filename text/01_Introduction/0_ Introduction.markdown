@@ -47,15 +47,15 @@ enviar um patch ou pull-request.
 
 Caso queira contribuir com a versão brasileira, você pode começar fazendo um
 fork do repositório no Github em
-[http://github.com/djalmaoliveira/gitbook](http://github.com/djalmaoliveira/gitbook)
+[http://github.com/schacon/gitbook](http://github.com/schacon/gitbook) branch pt_BR
 e enviar um pull-request quando fizer alguma alteração.
-Caso deseje contato direto, envie emails para
-[djalmaoliveira@gmail.com](mailto://djalmaoliveira@gmail.com)
 
 ### Créditos e Colaboradores na versão Brasileira ###
 
-Aqui agradeço aos colaboradores que ajudaram/ajudam no desenvolvimento desta versão.
-* **Enderson Maia** [endersonmaia@gmail.com](mailto://endersonmaia@gmail.com)
+Aqui a lista de colaboradores que ajudaram/ajudam no desenvolvimento desta versão.  
+
+* Djalma Oliveira [djalmaoliveira@gmail.com](mailto://djalmaoliveira@gmail.com) no Github [http://github.com/djalmaoliveira/gitbook](http://github.com/djalmaoliveira/gitbook).  
+* Enderson Maia [endersonmaia@gmail.com](mailto://endersonmaia@gmail.com)  no Github [http://github.com/enderson/gitbook](http://github.com/enderson/gitbook).  
 
 
 ### Referências ###

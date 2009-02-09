@@ -1,15 +1,15 @@
-﻿## Git Hooks ##
+﻿## Git Hooks ## 
 
-Hooks são pequenos scripts que você pode colocar no diretório $GIT_DIR/hooks
+Hooks são pequenos scripts que você pode colocar no diretório GIT_DIR/hooks
 para disparar um ação em certos pontos. Quando git-init é executado, uns
 exemplos úteis de hooks são copiados no diretório hooks do novo repositório,
 mas por padrão eles são todos desativados. Para ativar um hook, renomeie ele
 removendo o seu sufixo .sample.
 
 
-### applypatch-msg ###
+### applypatch-msg ### 
 
-    GIT_DIR/hooks/applypatch-msg
+    GIT_DIR/hooks/applypatch-msg 
 
 Esse hook é invocado pelo script 'git-am'. Ele leva um simples parâmetro, o nome
 do arquivo que detém a mensagem de commit proposta. Saindo com um status diferente
@@ -344,5 +344,5 @@ cancelado.
 
 ### Referências ###
 
-[Git Hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html)
-* http://probablycorey.wordpress.com/2008/03/07/git-hooks-make-me-giddy/
+[Git Hooks](http://www.kernel.org/pub/software/scm/git/docs/githooks.html)  
+[Git hooks make me giddy](http://probablycorey.wordpress.com/2008/03/07/git-hooks-make-me-giddy/)

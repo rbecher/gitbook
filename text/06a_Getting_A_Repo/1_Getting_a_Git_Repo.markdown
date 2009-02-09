@@ -42,7 +42,7 @@ inicial. Você pode colocar ele sobre um controle de revisões do git como segue
     $ cd project
     $ git init
 
-Git irá reponder
+Git irá responder
 
     Initialized empty Git repository in .git/
 
