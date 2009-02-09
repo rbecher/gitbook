@@ -1,6 +1,6 @@
-### Git Hooks ###
+## Git Hooks ##
 
-Hooks are little scripts you can place in $GIT_DIR/hooks directory to trigger
+Hooks are little scripts you can place in GIT_DIR/hooks directory to trigger
 action at certain points. When git-init is run, a handful example hooks are
 copied in the hooks directory of the new repository, but by default they are
 all disabled. To enable a hook, rename it by removing its .sample suffix.
