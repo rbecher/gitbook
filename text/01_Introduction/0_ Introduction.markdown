@@ -1,49 +1,50 @@
-## Welcome to Git ##
+## Willkommen bei Git ##
 
-Welcome to Git - the fast, distributed version control system.
+Willkommen bei Git - Das schnelle, verteilte Versionskontrollsystem.
 
-This book is meant to be a starting point for people new to Git to learn it 
-as quickly and easily as possible.
+Dieses Buch ist als Einstieg gedacht für Personen, denen Git neu ist und die
+es möglichst schnell und einfach lernen wollen.
 
+Der erste Abschnitt führt in die Art ein, wie Git Daten behandelt, um ein 
+Gefühl für die Unterschiede zu anderen Versionskontrollsystemen zu vermitteln.
+Der Abschnitt dauert ungefähr 20 Minuten.
 
-This book will start out by introducing you to the way Git stores data, to 
-give you the context for why it is different than other VCS tools.
-This is meant to take you about 20 minutes.
+Danach kümmern wir uns um **Grundlegendes Git**, also die Kommandows, die Sie 90%
+ihrer Zeit benutzen werden. Deren Kenntnis sollte Ihnen als solide Basis dienen
+können, um Git bequem bedienen zu können. Der Abschnitt kostet Sie vielleicht eine
+halbe Stunde Lesezeit.
 
-Next we will cover **Basic Git Usage** - the commands you will be using 90% of 
-the time.  These should give you a good basis to use Git comfortably for most
-of what you're going to use it for.  This section should take you about 30 
-minutes to read through.
+Im Anschluss geht es schon um **Erweitertes Git**, und damit um ansatzweise 
+komplexere Zusammenhänge. Dafür können diese eventuell die grundlegenden Befehle
+verdrängen, die wir vorher gelernt haben. In diesem Abschnitt werden zum Großteil
+Tricks behandelt und Befehle, die einem nach Kenntnis der Grundlagen leichter von der
+Hand gehen.
 
-Next we will go over **Intermediate Git Usage** - things that are slightly more
-complex, but may replace some of the basic commands you learned in the first 
-section.  This will mostly be tricks and commands that will feel more 
-comfortable after you know the basic commands.
+Schlussendlich kommt dann **Git für Fortgeschrittene**, also Kommandos, die Sie
+wahrscheinlich nicht sehr häufig benutzen, die aber in gewissen Situationen
+sich als hilfreich erweisen können. Das Wissen um diese sollte ihre Erfahrung mit
+Git gut abrunden, so dass Sie sich mit Grund Git-Könner nennen dürfen.
 
-After you have all of that mastered, we will cover **Advanced Git** - commands
-that most people probably don't use very often, but can be very helpful in
-certain situations.  Learning these commands should round out your day-to-day
-git knowledge; you will be a master of the Git!
+Da Sie nun mit Git umgehen können, gehen wir im Anschluss auf **Praktisches Git**
+ein. Hier geht es um Git in Scripts, um Deployment, Editoren und einiges mehr.
+Essentiell hilft ihnen dieser Abschnitt, Git in ihre gewohnte Arbeitsumgebung zu
+integrieren.
 
-Now that you know Git, we will then cover **Working with Git**.  Here we will go
-over how to use Git in scripts, with deployment tools, with editors and more.
-These sections are meant to help you integrate Git into your environment.
+Schlussendlich folgt eine Artikel-Serie zu eher **Tiefgehender Dokumentation**,
+die Entwicklern helfen kann, die Interna und Protokolle zu verstehen und mit ihnen
+zu arbeiten.
 
-Lastly, we will have a series of articles on **low-level documentation** that may
-help the Git hackers who want to learn how the actual internals and protocols
-work in Git.
+### Feedback und der eigene Beitrag ###
 
-### Feedback and Contributing ###
-
-At any point, if you see a mistake or want to contribute to the book, you can 
+[TODO] At any point, if you see a mistake or want to contribute to the book, you can 
 send me an email at [schacon@gmail.com](mailto://schacon@gmail.com), or you
 can clone the source of this book at 
 [http://github.com/schacon/gitbook](http://github.com/schacon/gitbook)
 and send me a patch or a pull-request.
 
-### References ###
+### Referenzen ###
 
-Much of this book is pulled together from different sources and then added to.  
+[TODO] Much of this book is pulled together from different sources and then added to.  
 If you would like to read some of the original articles or resources, please
 visit them and thank the authors:
 
