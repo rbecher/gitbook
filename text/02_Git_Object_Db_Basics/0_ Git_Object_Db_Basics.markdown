@@ -52,4 +52,4 @@ that you may be familiar with.  Subversion, CVS, Perforce, Mercurial and the
 like all use _Delta Storage_ systems - they store the differences between one
 commit and the next.  Git does not do this - it stores a snapshot of what all
 the files in your project look like in this tree structure each time you
-commit. This is a very important concept to understand when using Git.
+commit, of course this won't (necessarily) mean that your repository history will reach an enormous file size. Using "git gc", Git will do some house keeping, including compressing file revisions. This is a very important concept to understand when using Git.
