@@ -36,17 +36,19 @@ zu arbeiten.
 
 ### Feedback und der eigene Beitrag ###
 
-[TODO] At any point, if you see a mistake or want to contribute to the book, you can 
-send me an email at [schacon@gmail.com](mailto://schacon@gmail.com), or you
-can clone the source of this book at 
-[http://github.com/schacon/gitbook](http://github.com/schacon/gitbook)
-and send me a patch or a pull-request.
+Wenn Sie zu irgendeinem Zeitpunkt einen Fehler sehen oder zu diesem Buch
+beitragen möchten, können Sie mir unter
+[schacon@gmail.com](mailto:schacon@gmail.com) eine E-Mail schicken, oder Sie
+können den Quellcode dieses Buches unter
+[http://github.com/schacon/gitbook](http://github.com/schacon/gitbook) clonen
+und mir einen Patch zuschicken oder eine Pull-Anfrage zusenden.
 
 ### Referenzen ###
 
-[TODO] Much of this book is pulled together from different sources and then added to.  
-If you would like to read some of the original articles or resources, please
-visit them and thank the authors:
+Ein Großteil dieses Buches ist aus einer Reihe verschiedener Ressourcen
+zusammengestellt und dann ergänzt worden. Wenn Sie einige dieser ursprünglichen
+Artikel oder Ressourcen lesen möchten, bitte lesen Sie die folgenden Links und
+bedanken Sie sich bei deren Autoren:
 
 * [Git User Manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html)
 * [The Git Tutorial](http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
