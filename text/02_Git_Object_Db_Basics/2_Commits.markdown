@@ -1,13 +1,12 @@
-### Commit Object ###
+### Commit-Objekt ###
 
-The "commit" object links a physical state of a tree with a description
-of how we got there and why. 
+Das "commit"-Objekt verbindet den physikalischen Zustand eines Baumes
+mit einer Beschreibung dessen, wie und warum wir zu ihm gelangt sind.
 
 [fig:object-commit]
 
-You can use the --pretty=raw option to
-linkgit:git-show[1] or linkgit:git-log[1] to examine your favorite
-commit:
+Sie können die Option --pretty-raw von linkgit:git-show[1] oder
+linkgit:git-log[1] benutzen, um Ihren Lieblings-Commit anzusehen:
 
     $ git show -s --pretty=raw 2be7fcb476
     commit 2be7fcb4764f2dbcee52635b91fedb1b3dcf7ab4
@@ -20,43 +19,50 @@ commit:
 
         Signed-off-by: Junio C Hamano <gitster@pobox.com>
 
-As you can see, a commit is defined by:
+Wie Sie sehen können, wird ein Commit definiert durch:
 
-- a **tree**: The SHA1 name of a tree object (as defined below), representing
-  the contents of a directory at a certain point in time.
-- **parent(s)**: The SHA1 name of some number of commits which represent the
-  immediately previous step(s) in the history of the project.  The
-  example above has one parent; merge commits may have more than
-  one.  A commit with no parents is called a "root" commit, and
-  represents the initial revision of a project.  Each project must have
-  at least one root.  A project can also have multiple roots, though
-  that isn't common (or necessarily a good idea).
-- an **author**: The name of the person responsible for this change, together
-  with its date.
-- a **committer**: The name of the person who actually created the commit,
-  with the date it was done.  This may be different from the author; for
-  example, if the author wrote a patch and emailed it to another person who
-  used the patch to create the commit.
-- a **comment** describing this commit.
+- einen **Baum** (tree): Der SHA1-Name eines Baum-Objektes (wie weiter unten
+  erklärt); dies stellt den Inhalt eines Verzeichnisses zu einem
+  bestimmten Zeitpunkt dar.
+- **Vorgänger** (ein oder mehrere "parent"-Einträge): Die SHA1-Namen von
+  einem oder mehreren Commits, welche den/die unmittelbar vorangehenden
+  Schritt(e) in der Geschichte des Projektes bezeichnen.  Das Beispiel
+  oben hat einen Vorgänger; Merge-Commits können mehr als einen haben.
+  Einen Commit ohne Vorgänger nennen wir ein "Root-Commit"
+  (Wurzel-Commit); so ein Commit stellt den Anfangszustand eines
+  Projektes dar.  Jedes Projekt muss mindestens eine Wurzel haben.  Ein
+  Projekt kann auch mehrere Wurzeln haben, aber das ist nicht sehr
+  häufig (und auch nicht unbedingt eine gute Idee).
+- einen **Autor** (author): Der Name der Person, die für diese Änderung
+  verantwortlich war, sowie das Datum der Änderung.
+- einen **Committer**: Der Name der Person, die diesen Commit erzeugt
+  hat, zusammen mit dem Datum, wann dies geschehen ist.  Dies kann eine
+  andere Person sein als der Autor, zum Beispiel, wenn der Autor einen
+  Patch geschrieben hat und diesen einer anderen Person per E-Mail
+  geschickt hat, die dann diesen Patch benutzt hat, um ein Commit zu
+  erzeugen.
+- einen **Kommentar** (comment), der diesen Commit beschreibt.
 
-Note that a commit does not itself contain any information about what
-actually changed; all changes are calculated by comparing the contents
-of the tree referred to by this commit with the trees associated with
-its parents.  In particular, git does not attempt to record file renames
-explicitly, though it can identify cases where the existence of the same
-file data at changing paths suggests a rename.  (See, for example, the
--M option to linkgit:git-diff[1]).
+Beachten Sie, dass ein Commit selber keine Informationen darüber hat,
+was sich genau geändert hat; alle Änderungen werden dadurch berechnet,
+indem die Inhalte des Baumes, auf das dieser Commit verweist, mit den
+Bäumen verglichen werden, auf den die Vorgänger verweisen.  Insbesondere
+versucht git nicht explizit, Dateiumbenennungen zu verzeichnen, obgleich
+es Fälle identifizieren kann, wo die Existenz derselben Dateidaten in
+unterschiedlichen Pfaden eine Umbenennung nahelegt.  (Sehen Sie hierzu
+zum Beispiel die Option -M von linkgit:git-diff[1].)
 
-A commit is usually created by linkgit:git-commit[1], which creates a
-commit whose parent is normally the current HEAD, and whose tree is
-taken from the content currently stored in the index.
+Ein Commit wird im Allgemeinen von linkgit:git-commit[1] erzeugt; dieser
+Befehl erzeugt einen Commit, dessen Vorgänger normalerweise der aktuelle
+HEAD ist und dessen Baum aus den Inhalten besteht, die gerade im Index
+gespeichert sind..
 
-### The Object Model ###
+### Das Objekt-Modell ###
 
-So, now that we've looked at the 3 main object types (blob, tree and commit), 
-let's take a quick look at how they all fit together.
+So, nun, da wir die drei wesentlichen Objekttypen angesehen haben (Blob,
+Baum und Commit), lassen Sie uns kurz ansehen, wie sie zusammenpassen.
 
-If we had a simple project with the following directory structure:
+Wenn wir ein einfaches Projekt mit folgender Verzeichnisstruktur haben:
 
     $>tree
     .
@@ -66,12 +72,15 @@ If we had a simple project with the following directory structure:
         |   `-- tricks.rb
         `-- mylib.rb
 
-    2 directories, 3 files
+    2 Verzeichnisse, 3 Dateien
 
-And we committed this to a Git repository, it would be represented like this:
+und dieses Projekt in ein Git-Repository committen, würde es wie folgt
+dargestellt werden:
 
 [fig:objects-example]
 
-You can see that we have created a **tree** object for each directory (including the root)
-and a **blob** object for each file.  Then we have a **commit** object to point
-to the root, so we can track what our project looked like when it was committed.
+Sie sehen, dass wir ein **tree**-Objekt für jedes Verzeichnis (inklusive
+des Wurzelverzeichnisses) sowie ein **blob**-Objekt für jede Datei
+erstellt haben.  Schließlich haben wir noch ein **commit**-Objekt, das
+auf die Wurzel zeigt, sodass wir hinterher nachvollziehen können, wie
+unser Projekt aussah, als es committet wurde.
