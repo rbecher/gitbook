@@ -1,58 +1,67 @@
-## Normal Workflow ##
+## Normaler Arbeitsablauf ##
+
+Nachdem Sie einige Dateien geändert haben, fügen Sie den aktualisierten
+Inhalt der Dateien zum Index hinzu:
 
 Modify some files, then add their updated contents to the index:
 
-    $ git add file1 file2 file3
+    $ git add datei1 datei2 datei3
 
-You are now ready to commit.  You can see what is about to be committed
-using linkgit:git-diff[1] with the --cached option:
+Jetzt können Sie committen.  Sie können sehen, was Sie demnächst
+committen würden, indem Sie linkgit:git-diff[1] mit der Option --cached
+aufrufen:
 
     $ git diff --cached
 
-(Without --cached, linkgit:git-diff[1] will show you any changes that
-you've made but not yet added to the index.)  You can also get a brief
-summary of the situation with linkgit:git-status[1]:
+(Ohne --cached würde Ihnen linkgit:git-diff[1] Änderungen zeigen, die
+Sie gemacht haben aber die Sie noch nicht dem Index hinzugefügt haben.)
+Sie können auch eine kurze Zusammenfassung der Situation erhalten, indem
+Sie linkgit:git-status[1] aufrufen:
 
     $ git status
     # On branch master
     # Changes to be committed:
     #   (use "git reset HEAD <file>..." to unstage)
     #
-    #	modified:   file1
-    #	modified:   file2
-    #	modified:   file3
+    #	modified:   datei1
+    #	modified:   datei2
+    #	modified:   datei3
     #
 
-If you need to make any further adjustments, do so now, and then add any
-newly modified content to the index.  Finally, commit your changes with:
+Wenn Sie weitere Anpassungen vornehmen müssen, tun Sie dies jetzt, und
+fügen sie den neuen Inhalt dem Index hinzu.  Schließlich können Sie Ihre
+Änderungen mit folgendem Befehl committen:
 
     $ git commit
 
-This will again prompt you for a message describing the change, and then
-record a new version of the project.
+Dies wird sie um eine Zusammenfassung der Änderungen bitten und dann
+eine neue Version des Projektes verzeichnen.
 
-Alternatively, instead of running `git add` beforehand, you can use
+Alternativ können sie, statt vorher `git add` aufzurufen,
 
     $ git commit -a
     
-which will automatically notice any modified (but not new) files, add
-them to the index, and commit, all in one step.
+benutzen; dies wird automatisch alle geänderten Dateien (aber keine neu
+hinzugekommenen Dateien) erkennen, sie zum Index hinzufügen, und die
+Änderungen committen, alles in einem Schritt.
 
-A note on commit messages: Though not required, it's a good idea to
-begin the commit message with a single short (less than 50 character)
-line summarizing the change, followed by a blank line and then a more
-thorough description.  Tools that turn commits into email, for
-example, use the first line on the Subject: line and the rest of the
-commit message in the body.
+Ein Hinweis zu Commitzusammenfassungen: obwohl es nicht erforderlich
+ist, ist es dennoch eine gute Idee, die Zusammenfassung mit einer
+einzigen kurzen (weniger als 50 Zeichen umfassenden) Zeile einzuleiten,
+gefolgt von einer Leerzeile und dann einer umfassenderen Beschreibung.
+Zum Beispiel verwenden Werkzeuge, die aus Commits E-Mail-Nachrichten
+erstellen, die erste Zeile als Betreff der E-Mail und den Rest der
+Commitzusammenfassung als Text der E-Mail.
 
 
-#### Git tracks content not files ####
+#### Git verwaltet Inhalte, nicht Dateien ####
 
-Many revision control systems provide an "add" command that tells the
-system to start tracking changes to a new file.  Git's "add" command
-does something simpler and more powerful: `git add` is used both for new
-and newly modified files, and in both cases it takes a snapshot of the
-given files and stages that content in the index, ready for inclusion in
-the next commit.
+Vielen Source-Code-Verwaltungssystem bieten einen "add"-Befehl an, der
+dem System sagt, er möge ab jetzt Änderungen an einer neuen Datei
+verfolgen.  Gits "add"-Befehl tut etwas Einfacheres aber Mächtigeres:
+`git add` wird sowohl für neue als auch für geänderte Dateien verwendet,
+und in beiden Fällen nimmt es einen Schnappschuss der betreffenden
+Dateien und stellt diesen Inhalt im Index bereit, wo er dann im nächsten
+Commit verwendet werden kann.
 
-[gitcast:c2_normal_workflow]("GitCast #2: Normal Workflow")
+[gitcast:c2_normal_workflow]("GitCast #2: Normaler Arbeitsablauf")
