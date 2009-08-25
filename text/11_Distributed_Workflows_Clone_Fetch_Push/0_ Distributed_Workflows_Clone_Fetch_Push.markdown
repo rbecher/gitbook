@@ -142,14 +142,14 @@ like this:
 
                             you push
       your personal repo ------------------> your public repo
-    	^                                     |
-    	|                                     |
-    	| you pull                            | they pull
-    	|                                     |
-    	|                                     |
-            |               they push             V
+        ^                                      |
+        |                                      |
+        | you pull                             | they pull
+        |                                      |
+        |                                      |
+        |                   they push          v
       their public repo <------------------- their repo
-      
+
 
 
 ### Pushing changes to a public repository ###
