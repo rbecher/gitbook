@@ -1,34 +1,38 @@
-## Git Directory and Working Directory ##
+## Git-Vereichnis und Arbeitsverzeichnis ##
 
-### The Git Directory ###
+### Das Git-Verzeichnis ###
 
-The 'git directory' is the directory that stores all Git's history and meta
-information for your project - including all of the objects (commits, trees,
-blobs, tags), all of the pointers to where different branches are and more.
+Das 'Git-Verzeichnis' ist das Verzeichnis, in dem Git die gesamte
+Historie und alle Metainformationen für Ihr Projekt speichert --
+inklusiver aller Objekte (Commits, Bäume, Blogs, Tags), alle Zeiger auf
+die verschiedenen Zweige und viele mehr.
 
-There is only one Git Directory per project (as opposed to one per
-subdirectory like with SVN or CVS), and that directory is (by default, though
-not necessarily) '.git' in the root of your project.  If you look at the
-contents of that directory, you can see all of your important files:
+Es gibt pro Projekt nur ein Git-Verzeichnis (im Gegensatz zu einem
+pro Unterverzeichnis wie bei SVN oder CVS), und dieses Verzeichnis heißt
+(per Default, aber nicht notwendigerweise) '.git' im Wurzelverzeichnis
+Ihres Projektes.  Wenn Sie sich den Inhalt dieses Verzeichnisses
+ansehen, sehen Sie alle Ihre wichtigen Dateien:
 
     $>tree -L 1
     .
-    |-- HEAD         # pointer to your current branch
-    |-- config       # your configuration preferences
-    |-- description  # description of your project 
-    |-- hooks/       # pre/post action hooks
-    |-- index        # index file (see next section)
-    |-- logs/        # a history of where your branches have been
-    |-- objects/     # your objects (commits, trees, blobs, tags)
-    `-- refs/        # pointers to your branches
+    |-- HEAD         # Zeiger auf Ihren aktuellen Zweig
+    |-- config       # Ihre Konfigurations-Vorlieben
+    |-- description  # Beschreibung Ihres Projektes
+    |-- hooks/       # "Haken", die vor oder nach bestimmten Aktionen ausgeführt werden
+    |-- index        # Indexdatei (siehe nächsten Abschnitt)
+    |-- logs/        # eine Historie dessen, wo Ihre Zweige gewesen sind
+    |-- objects/     # Ihre Objekte (Commits, Bäume, Blobs, Tags)
+    `-- refs/        # Zeiger auf Ihre Zweige
 
-(there may be some other files/directories in there as well, but they are not important for now)
+(dort können auch andere Dateien/Verzeichnisse enthalten sein, aber
+diese sind im Moment nicht wichtig)
 
-### The Working Directory ###
+### Das Arbeitsverzeichnis ###
 
-The Git 'working directory' is the directory that holds the current checkout 
-of the files you are working on.  Files in this directory are often removed
-or replaced by Git as you switch branches - this is normal.  All your history 
-is stored in the Git Directory; the working directory is simply a temporary 
-checkout place where you can modify the files until your next commit.
-
+Das Git-Arbeitsverzeichnis ist das Verzeichnis, das den aktuelle
+ausgecheckten Stand der Dateien enthält, die Sie im Moment bearbeiten.
+Dateien in diesem Verzeichnis werden oft von Git gelöscht oder ersetzt,
+wenn Sie zwischen Zweigen hin- und herwechseln - das ist normal.  All
+Ihre Historie wird im Git-Verzeichnis gespeichert; das
+Arbeitsverzeichnis ist einfach ein temporärer Checkout-Ort, wo Sie die
+Dateien bis zum Ihrem nächsten Commit bearbeiten können.

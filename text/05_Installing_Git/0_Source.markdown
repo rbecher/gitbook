@@ -1,14 +1,15 @@
-### Installing from Source ###
+### Git vom Quellcode installieren ###
 
-In short, on a Unix-based system, you can download the Git source code from the
-[Git Download Page](http://git-scm.com/download), and then run something
-along the lines of :
+Kurz gesagt können Sie auf einem Unix-basierten System den Git-Quellcode
+von der [Git-Downloadseite](http://git-scm.com/download) herunterladen
+und dann etwa Folgendes ausführen:
 
-    $ make prefix=/usr all ;# as yourself
-    $ make prefix=/usr install ;# as root
+    $ make prefix=/usr all ;# als ihr normaler Benutzer
+    $ make prefix=/usr install ;# als root
 
-You will need the [expat](http://expat.sourceforge.net/), 
-[curl](http://curl.linux-mirror.org),
-[zlib](http://www.zlib.net), and [openssl](http://www.openssl.org) libraries
-installed - though with the possible exception of *expat*, these will normally already
-be there.
+Für das Übersetzen werden Sie die
+[expat](http://expat.sourceforge.net/)-,
+[curl](http://curl.linux-mirror.org)-, [zlib](http://www.zlib.net)- und
+[openssl](http://www.openssl.org)-Bibliotheken bereits installieret
+haben müssen - allerdings werden diese (mit der möglichen Ausnahme von
+*expat*) in der Regel bereits vorhanden sein.
