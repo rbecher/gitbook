@@ -56,9 +56,9 @@ Commitzusammenfassung als Text der E-Mail.
 
 #### Git verwaltet Inhalte, nicht Dateien ####
 
-Vielen Source-Code-Verwaltungssystem bieten einen "add"-Befehl an, der
+Viele Source-Code-Verwaltungssystem bieten einen "add"-Befehl an, der
 dem System sagt, er möge ab jetzt Änderungen an einer neuen Datei
-verfolgen.  Gits "add"-Befehl tut etwas Einfacheres aber Mächtigeres:
+verfolgen.  Der "add"-Befehl bei Git tut etwas Einfacheres, jedoch Mächtigeres:
 `git add` wird sowohl für neue als auch für geänderte Dateien verwendet,
 und in beiden Fällen nimmt es einen Schnappschuss der betreffenden
 Dateien und stellt diesen Inhalt im Index bereit, wo er dann im nächsten
